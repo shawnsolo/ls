@@ -75,7 +75,7 @@ app.controller('HomeController', function($scope) {
       city: 'The Internet',
       date: '10/11/15',
       title: 'We Met Through Written Word',
-      description: 'A preview of our inner-workings. After years of scouring college campuses and singles wards, we both caved.',
+      description: 'She was in Las Vegas, he was in Dallas. Carefully crafted emails shed light into our inner-workings.',
       index: 1
     },
     {
