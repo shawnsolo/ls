@@ -1,0 +1,60 @@
+#give {
+  text-align: center;
+  p {
+    font-size: 1.2em;
+  }
+  a {
+    .payment-option {
+      &:hover {
+        background: #f0f0f0;
+      }
+    }
+  }
+  .payment-option {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    // box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.16);
+    padding: 30px;
+    margin: 20px 0;
+    text-align: center;
+    @include mq-sm {
+      margin-top: 50px;
+    }
+    img {
+      height: 60px;
+      @include mq-sm {
+        height: 150px;
+      }
+    }
+    &.registry {
+      padding: 20px 0;
+      @include mq-sm {
+        padding: 50px;
+      }
+      img {
+        height: 60px;
+        @include mq-lg {
+          height: 100px;
+        }
+      }
+    }
+  }
+  .address {
+    h2 {
+      font-weight: 500;
+    }
+    // border: 1px solid lightgrey;
+    border-radius: 3px;
+    // box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.16);
+    padding: 30px;
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 1.3em;
+    text-align: center;
+    padding-bottom: 30px;
+    @include mq-sm {
+      width: 500px;
+    }
+  }
+}

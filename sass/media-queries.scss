@@ -1,0 +1,31 @@
+/********** MIXINS FOR MEDIA QUERIES **********/
+$x-small-screen: 350px;
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$extra-large-screen: 1200px;
+@mixin mq-xs {
+  @media (min-width: #{$x-small-screen}) {
+    @content;
+  }
+}
+@mixin mq-sm {
+  @media (min-width: #{$small-screen}) {
+    @content;
+  }
+}
+@mixin mq-md {
+  @media (min-width: #{$medium-screen}) {
+    @content;
+  }
+}
+@mixin mq-lg {
+  @media (min-width: #{$large-screen}) {
+    @content;
+  }
+}
+@mixin mq-xl {
+  @media (min-width: #{$extra-large-screen}) {
+    @content;
+  }
+}

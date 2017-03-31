@@ -1,0 +1,282 @@
+<nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed glyphicon glyphicon-menu-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" ng-click="mobileNav()"></button>
+      <div class="logo"><div>L&amp;S</div></div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" ng-click="scrollToElement('#story')">Our Story</a></li>
+        <li><a href="#" ng-click="scrollToElement('#wedding')">The Wedding</a></li>
+        <li><a href="#" ng-click="scrollToElement('#give')">Give</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section id="hero">
+  <div class="container">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="banner-outer">
+        <div class="banner-inner">
+          <h2>Lisa &amp; Shawn</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="pillars">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="pillar-item">
+          <div>
+            <button type="button" class="btn btn-default" ng-click="scrollToElement('#story')">Our Story</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="pillar-item">
+          <div>
+            <button type="button" class="btn btn-default" ng-click="scrollToElement('#wedding')">The Wedding</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="pillar-item">
+          <div>
+            <button type="button" class="btn btn-default" ng-click="scrollToElement('#give')">Give</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="story">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Our Story</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-md-4" ng-repeat="post in postOrder">
+        <div class="insta-post">
+          <header>
+            <div class="thumbnail">
+              <div>L&amp;S</div>
+            </div>
+            <div class="title">
+              <div>{{post.location}}</div>
+              <small>{{post.city}}</small>
+            </div>
+            <div class="date">
+              {{post.date}}
+            </div>
+          </header>
+          <div class="post">
+            <img ng-src="{{post.image}}" alt="">
+          </div>
+          <footer>
+            <span class="glyphicon glyphicon-heart-empty" style="font-size: 2.5rem;cursor:pointer;" aria-hidden="true" ng-show="!liked" ng-click="liked=!liked"></span>
+            <span class="glyphicon glyphicon-heart" style="font-size: 2.5rem;color:#FF6A6A;cursor:pointer;" aria-hidden="true" ng-show="liked" ng-click="liked=!liked"></span>
+            <hr>
+            <strong>{{post.title}}</strong>
+            <p>{{post.description}}</p>
+          </footer>
+          <div class="v-connector" ng-if="isMobile && !$last">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </div>
+
+          <div class="h-connector" ng-if="isTablet && $even">
+            <span class="glyphicon glyphicon-chevron-right" ng-show="$index == 8 || $index == 0 || $index == 4"></span>
+            <span class="glyphicon glyphicon-chevron-left" ng-show="$index == 10 || $index == 2 || $index == 6"></span>
+          </div>
+          <div class="v-connector" ng-if="isTablet && ($index == 9 || $index == 1 || $index == 2 || $index == 5 || $index == 6)">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </div>
+
+          <div class="h-connector" ng-if="($index+1)%3 && (!isMobile && !isTablet)">
+            <span class="glyphicon glyphicon-chevron-right" ng-show="$index == 0 || $index == 1 || $index == 6 || $index == 7"></span>
+            <span class="glyphicon glyphicon-chevron-left" ng-show="$index == 3 || $index == 4 || $index == 9 || $index == 10"></span>
+          </div>
+          <div class="v-connector" ng-if="(($index+1)==9 || ($index+1)==3 || ($index+1)==4)  && (!isMobile && !isTablet)">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="wedding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>The Wedding</h1>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 col-lg-offset-2">
+          <div class="insta-post">
+            <header>
+              <div class="thumbnail">
+                <div>L&amp;S</div>
+              </div>
+              <div class="title">
+                <div>ln.scapades</div>
+                <small>New York, NY</small>
+              </div>
+              <div class="date">
+                4/29/17
+              </div>
+            </header>
+            <div class="post">
+              <img ng-src="images/ny/ny-1.jpg" alt="">
+            </div>
+            <footer>
+              <span class="glyphicon glyphicon-heart-empty" style="font-size: 2.5rem;cursor:pointer;" aria-hidden="true" ng-show="!liked" ng-click="liked=!liked"></span>
+              <span class="glyphicon glyphicon-heart" style="font-size: 2.5rem;color:#FF6A6A;cursor:pointer;" aria-hidden="true" ng-show="liked" ng-click="liked=!liked"></span>
+            </footer>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h3>Love Through Travel</h3>
+          <p>
+            Having met online, we had to travel to see each other for the first time.
+            Then the second time. By our third encounter, our innate love of all things
+            travel, and the excitement of having a partner to enjoy it with, led us to
+            start meeting in more exotic locations: Oregon, Seattle, Victoria, Cozumel,
+            Chicago, Denver, etc. Almost every meaningful event in the relationship took
+            place in a different city. When deciding on a wedding location, an exciting new
+            destination seemed only natural!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 col-lg-offset-2 col-lg-push-4">
+          <div class="insta-post">
+            <header>
+              <div class="thumbnail">
+                <div>L&amp;S</div>
+              </div>
+              <div class="title">
+                <div>ln.scapades</div>
+                <small>New York, NY</small>
+              </div>
+              <div class="date">
+                4/29/17
+              </div>
+            </header>
+            <div class="post">
+              <img ng-src="images/ny/ny-2.jpg" alt="">
+            </div>
+            <footer>
+              <span class="glyphicon glyphicon-heart-empty" style="font-size: 2.5rem;cursor:pointer;" aria-hidden="true" ng-show="!liked" ng-click="liked=!liked"></span>
+              <span class="glyphicon glyphicon-heart" style="font-size: 2.5rem;color:#FF6A6A;cursor:pointer;" aria-hidden="true" ng-show="liked" ng-click="liked=!liked"></span>
+            </footer>
+          </div>
+        </div>
+        <div class="col-lg-4 col-lg-pull-4">
+          <h3>Sharing The Love</h3>
+          <p>
+            Up until now, we have only been able to share our travels through computer screens
+            and (overly) verbose stories. For our wedding, this had to change. We wanted to share
+            what brought us love with the ones we love the most; a weekend getaway-vacation to
+            NYC, culminating with our wedding!!! We kept the wedding intimate but are looking
+            forward to seeing friends and family at our open house!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="open-house">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Open House</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="address">
+          <h3>Oregon</h3>
+          July 5th 7 - 9 PM <br>
+          3577 Southvillage Dr <br>
+          Medford, OR
+        </div>
+        * Casual Dress *
+      </div>
+      <div class="col-sm-6">
+        <h3>Nevada</h3>
+        <div class="address">
+          May 20th 6:30 - 8:30 PM<br>
+          7633 Allano Way<br>
+          Las Vegas, NV
+        </div>
+        * Casual Dress *
+      </div>
+    </div>
+  </div>
+</section>
+<section id="give">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h1>Give</h1>
+        <p>
+          We graciously accept any contribution you would like to make toward our new life together.
+          However, the best gift you can give us is your time! We would love to hear from you,
+          to share a moment, to reminisce. Tell us of your stories and we'll tell you ours!
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <a href="https://cash.me/$shwnschlssr" target="_blank">
+          <div class="payment-option">
+            <img src="images/square.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6">
+        <a href="https://www.zola.com/registry/lisa-n-shawn" target="_blank">
+          <div class="payment-option" style="padding: 30px 0;">
+            <img src="images/zola.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6">
+        <a href="https://www.paypal.me/LisaShawn" target="_blank">
+          <div class="payment-option">
+            <img src="images/PayPal.png" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6">
+        <a href="https://venmo.com/?txn=pay&audience=friends&recipients=lisahale411&note=Wedding%20Gift" target="_blank">
+          <div class="payment-option">
+            <img src="images/venmo.png" alt="">
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="address">
+          <h3>Lisa + Shawn<br>7633 Allano Way<br>Las Vegas, NV 89128</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="footer">
+  <div class="seal">
+    <div>L&amp;S</div>
+  </div>
+</section>

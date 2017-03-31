@@ -1,0 +1,263 @@
+html, body {
+  font-family: 'Raleway', sans-serif !important;
+  background-color: #fafafa;
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-top: 3px solid #e1cebc;
+    border-bottom: 3px solid #e1cebc;
+    padding: 5px 0;
+    display: inline-block;
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
+.navbar-custom {
+  background-color: transparent;
+  color: white;
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+  .logo {
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    margin-top: 13px;
+    margin-left: 10px;
+    color: black;
+    border-radius: 20px;
+    @include mq-sm {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    div {
+      padding-top: 9px;
+      font-weight: 100;
+    }
+  }
+  .navbar-toggle {
+    font-size: 3rem;
+  }
+}
+.nav > li a {
+  margin-top: 5px;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.animate-hidden{
+     opacity:0;
+}
+.animate-visible{
+     opacity:1;
+}
+#hero {
+  height: 300px;
+  background: lightgrey;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    /* bottom, image */
+    url('../../images/collage.jpg');
+    background-size: cover;
+    .banner-outer {
+      margin-top: 80px;
+      background: #e1cebc;
+      padding: 10px;
+      @include mq-sm {
+        margin-top: 130px;
+        padding: 25px;
+      }
+      .banner-inner {
+        border: 4px solid white;
+        padding: 20px;
+        h2 {
+          margin: 0;
+          text-align: center;
+          font-size: 50px;
+          font-weight: 100;
+          @include mq-sm {
+            font-size: 80px;
+          }
+        }
+      }
+    }
+    @include mq-sm {
+      height: 550px;
+    }
+}
+
+#pillars {
+  border-top: 5px solid #e1cebc;
+  background: url('../../images/stripes.png');
+  background-size: cover;
+  padding: 10px 0;
+  border-bottom: 5px solid #e1cebc;
+  @include mq-xs {
+    padding: 30px 0;
+  }
+  @include mq-md {
+    padding: 80px 0;
+  }
+}
+#pillars .pillar-item {
+  text-align: center;
+}
+.pillar-item img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+.pillar-item button {
+  width: 80% !important;
+  border-radius: 0;
+  // background: #e1cebc;
+  background: #fff;
+  width: 50%;
+  border: 4px solid #e1cebc;
+  outline: none;
+  color: black;
+  font-size: 3rem;
+  font-weight: 100;
+  margin: 10px 0;
+  @include mq-xs {
+    margin: 20px 0;
+  }
+  @include mq-md {
+    margin: 0;
+    width: 100% !important;
+  }
+}
+.pillar-item button:hover, .pillar-item button:focus {
+  outline: none;
+  border-color: #e1cebc;
+  background: #fff !important;
+  color: black !important;
+  font-weight: 200;
+}
+#story {
+  text-align: center;
+}
+.insta-post {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 75px;
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  position: relative;
+  @include mq-md {
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+.insta-post .h-connector {
+  position: absolute;
+  top: 50%;
+  height: 5px;
+  width: 100px;
+  background: #e1cebc;
+  right: -100px;
+  span {
+    top: -18px;
+    font-size: 40px;
+    color: #363636;
+    margin-left: -20px;
+    @include mq-lg {
+      margin-left: -10px;
+    }
+  }
+}
+.insta-post .v-connector {
+  position: absolute;
+  height: 120px;
+  width: 5px;
+  background: #e1cebc;
+  right: 50%;
+  span {
+    top: 20px;
+    font-size: 40px;
+    color: #363636;
+    margin-left: -16px;
+    @include mq-md {
+      top: 35px;
+    }
+  }
+}
+.insta-post header {
+  text-align: left;
+  padding: 10px;
+}
+.insta-post .thumbnail {
+  vertical-align: top;
+  padding: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background: rgb(225, 206, 188);
+  margin: 0;
+  display: inline-block;
+  margin-right: 10px;
+  div {
+    font-size: 10px;
+    font-weight: 100;
+    margin-top: -2px;
+    margin-left: -5px;
+  }
+}
+.insta-post .title {
+  vertical-align: baseline;
+  display: inline-block;
+  small {
+    color: grey;
+  }
+}
+.insta-post .date {
+  float: right;
+  margin-top: 10px;
+  display: inline-block;
+}
+.insta-post .post img {
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+.insta-post footer {
+  padding: 10px 20px 20px 20px;
+  text-align: left;
+}
+.insta-post footer p {
+  margin: 0;
+}
+hr {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+#footer {
+  border-top: 1px lightgrey solid;
+  margin-top: 30px;
+  padding: 50px;
+  background: rgb(51,51,51);
+  text-align: center;
+  .seal {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #e1cebc;
+    div {
+      padding-top: 22px;
+      font-size: 2.5em;
+      font-weight: 100;
+    }
+  }
+}

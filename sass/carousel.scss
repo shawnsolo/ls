@@ -1,0 +1,22 @@
+#carousel {
+  position: relative;
+
+  .left, .right {
+    position: absolute;
+    top: 40%;
+    color: white;
+    opacity: .75;
+    font-size: 3em;
+    z-index: 10;
+    cursor: pointer;
+    @include mq-md {
+      top: 45%;
+    }
+  }
+  .left {
+    left: 10px;
+  }
+  .right {
+    right: 10px;
+  }
+}
