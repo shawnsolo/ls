@@ -173,7 +173,7 @@ app.controller('HomeController', function($scope) {
       location: 'l.n.scapades',
       city: 'Denver, CO',
       date: '1/15/17',
-      title: 'Let\'s Doing This Thing',
+      title: 'Let\'s Do This Thing',
       description: 'Keeping in harmony with our travel theme, it seemed only fitting to pop the question in the mountains of CO.',
       index: 12
     }
