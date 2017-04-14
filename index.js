@@ -156,7 +156,7 @@ app.controller('HomeController', ['$scope', function($scope) {
       city: 'Dallas, TX',
       date: '5/7/16',
       title: 'Hello Dallas',
-      description: ' Hipster neighborhoods, Tex-Mex cousine, and a rodeo rounded off the exploration of big D.',
+      description: ' Hipster neighborhoods, Tex-Mex cuisine, and a rodeo rounded off the exploration of big D.',
       index: 8
     },
     {
