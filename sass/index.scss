@@ -130,7 +130,7 @@ html, body {
   @include mq-xs {
     margin: 20px 0;
   }
-  @include mq-md {
+  @include mq-lg {
     margin: 0;
     width: 100% !important;
   }
